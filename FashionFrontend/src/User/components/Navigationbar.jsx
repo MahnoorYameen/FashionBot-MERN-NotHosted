@@ -41,7 +41,7 @@ const handleSearch = () => {
 
 
   return (
-    <Navbar expand="lg"  style={{backgroundColor:'#fff8f4 '}} className="border-bottom fixed-top">
+    <Navbar expand="lg"  style={{backgroundColor:'#fff8f4 '}} className="border-bottom sticky-top">
       <div className="container mx-5 py-1 rounded-pill" style={{backgroundColor:'#ffd7ba '}}>
 
 
