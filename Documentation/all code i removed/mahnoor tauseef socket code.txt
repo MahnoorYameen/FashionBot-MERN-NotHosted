@@ -1,0 +1,63 @@
+const {Server } = require('socket.io')
+// const port = 1234;
+// import { Server } from "socket.io";
+// connectToMongo();
+const server = http.createServer(app);
+const io = new Server(server, {
+  cors: {
+    origin: "http://localhost:5173",
+    methods: ["GET", "POST"], // Add the HTTP methods you want to allow
+  },
+});
+
+
+io.on("connection", (socket) => {
+  console.log(`User With ${socket.id} got connected`);
+
+  socket.on("join_room", async ({ userName, roomID }) => {
+    try {
+      // Check if the room with the given ID exists in the database
+      const existingRoom = await RoomInfo.findOne({ room_id: roomID });
+
+      if (existingRoom) {
+        // Join the Socket.IO room
+        socket.join(roomID.toString());
+
+        // Emit room information to all clients in the room
+        io.to(roomID.toString()).emit("room_info", {
+          roomID,
+          userName,
+        });
+
+        // Join the Socket.IO room based on the roomID
+        socket.join(roomID.toString());
+
+        // Emit a message to the user that they have joined the room
+        socket.emit("joined_room", { roomID, userName });
+
+        // Broadcast to all clients in the room that a new user has joined
+        socket.to(roomID.toString()).emit("user_joined", { roomID, userName });
+
+        console.log(`${userName} joined Room ${roomID}`);
+
+        console.log("User joined Room successfully");
+        console.log(`User with ${socket.id} joined Room ${roomID}`);
+      } else {
+        // Inform the user that the room does not exist
+        socket.emit("roomNotFound", roomID);
+      }
+    } catch (error) {
+      console.error("Error while joining room:", error);
+      // Handle the error appropriately (e.g., emit an error event to the client)
+    }
+  });
+
+  socket.on("send_message", (data) => {
+    socket.to(data.chatRoom).emit("recieve_message", data);
+    console.log(data);
+  });
+
+  socket.on("disconnect", () => {
+    console.log(`User With ${socket.id} disconnected`);
+  });
+});

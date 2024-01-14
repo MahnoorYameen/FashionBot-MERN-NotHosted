@@ -1,0 +1,82 @@
+mahnooryameen22
+Z4TAjtgyySMw4aXr
+
+mongodb+srv://mahnooryameen22:<password>@cluster0.b0e0eyz.mongodb.net/?retryWrites=true&w=majority
+
+
+
+
+color codes:
+#fff8f4
+
+
+
+FIREBASE:
+
+
+                                                              FIREBASE
+FIREBASE:
+online database hota lekin hum isko use krengy for:
+1) image url generation
+2)
+
+
+frontend command prompt main npm install firebase krlo
+firebase website pe jao:
+•	get started
+•	create project
+•	project name: FashionBot
+•	disable google and create project
+•	console pe hamary sary projects show hoty hain
+•	</>   pe jao
+•	App nickname: FashionBot    hosting ko check nh krna    now register app
+•	use npm pe hi rakhna
+•	nechy wala code lazzzmi kahin pe copy paste krlo main yahin kr rhi hun:
+
+
+-----------------------------------------------------------------------------
+
+==============================
+
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyAKoBgMbexW_DbXCJn6Lr7dvCmaBk76FWo",
+  authDomain: "fashionbot-6e023.firebaseapp.com",
+  projectId: "fashionbot-6e023",
+  storageBucket: "fashionbot-6e023.appspot.com",
+  messagingSenderId: "929273385795",
+  appId: "1:929273385795:web:ee21909d7853f85d0d95f6",
+  measurementId: "G-S2L3BB91QB"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+
+
+----------------------------------------------------------------------------------
+VS CODE MAIN FRONT END OPEN KARAIN:
+Admin folder main utilities name ka folder banain
+utilities main ek file banayen  FirebaseConfig.js
+uper jo code copy kiya tha wo paste krdain
+SOME CODING FOR INITIAL SETUP:
+1) pehli impoert wali line k nechy likho
+import { getStorage } from "firebase/storage";                       //yahan humny firebase se storage mungwali
+2)last line k nechy yeh likho
+export const storage=getStorage(app)                     //jo storage mungwayi thi usko use krny k liye export krwa liya
+
+
+-----------------------------------------------------------------------------------------------------------
+
+
+                                                            STORAGE USING:
+ab jahan jahan bhi firebase use krna hoga wahan uper yeh 2 lines ayengi
+import {storage} from "path of FirebaseConfig.js"
+import {ref, uploadBytes} "firebase/storage"
