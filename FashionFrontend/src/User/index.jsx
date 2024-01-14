@@ -7,7 +7,6 @@ import Navigationbar from "./components/Navigationbar";
 // import PostAnAdd from "./pages/PostAnAdd";
 // import AddDetails from "./components/AddDetails";
 import AddDetails from "./pages/AddDetails";
-import RegisterPage from "./../Guest/pages/RegisterPage"
 import SingleDynamicAd from "./../CommonFeatures/pages/SingleDynamicAd"
 import Chatbot from "../Guest/components/Chatbot";
 

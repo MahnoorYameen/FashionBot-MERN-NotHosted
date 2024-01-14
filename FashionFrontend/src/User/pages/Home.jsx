@@ -10,9 +10,12 @@ export default function Home() {
 
    <Banner/>
 
+   <Link to="/chatbot" className="text-decoration-none">
+
 <section classNamae="">
-            <marquee className="" behavior="" direction="right" width="100%" id="home">Use AI ChatBot for Assistance</marquee>
+            <marquee className="text-dark" behavior="" direction="right" width="100%" id="home">Use AI ChatBot for Assistance</marquee>
         </section>
+</Link>
 
    <CategoryLine/>
       <Ads />

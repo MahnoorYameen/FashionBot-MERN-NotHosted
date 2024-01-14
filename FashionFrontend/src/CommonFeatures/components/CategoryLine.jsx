@@ -23,7 +23,7 @@ function CategoryLine() {
   useEffect(() => {
     AOS.init({
       offset: 300,
-      duration: 2000
+      duration: 500
     });
   
   },[])

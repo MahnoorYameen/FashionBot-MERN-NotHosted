@@ -7,7 +7,7 @@ export default function Banner() {
     <>
     
     
-    <Carousel data-bs-theme="dark">
+    <Carousel data-bs-theme="dark" className='mt-5'>
 
 {/* first image */}
       <Carousel.Item >

@@ -19,21 +19,21 @@ export default function AdBlockDynamic({ CategoryName }) {
       })
       .catch(err => console.log(err.response.data))
   }, [])
+
   useEffect(() => {
     AOS.init({
       offset: 300,
-      duration: 3000
+      duration: 500
     });
   
   },[])
-
   return (
     <>
 
       {/* category name se match krty huay ads mungwany hain   */}
 
       {Ad.map((value, index) => (
-        <div className="col-lg-3 col-md-4 col-sm-6 my-3" key={index} data-aos="fade-up">
+        <div className="col-lg-3 col-md-4 col-sm-6 my-3" key={index} data-aos="fade-up" data-aos-duration="500">
           <Link className='text-decoration-none text-dark' to={`/get-ad-by-id/${value._id}`} >
             <Card style={{ height: "360px" }}>
               <Card.Img varient="top" src={value.AdThumbnail} className='object-fit-contain border rounded img-fluid' style={{ height: "200px" }} />
