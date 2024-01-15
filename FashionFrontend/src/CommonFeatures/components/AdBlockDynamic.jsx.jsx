@@ -3,21 +3,30 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 import { Card } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
+import Spinner from "./Spinner"
 import AOS from 'aos';
 import 'aos/dist/aos.css'
 
 
 export default function AdBlockDynamic({ CategoryName }) {
   const [Ad, setAd] = useState([])
+  const [loading, setLoading] = useState(false);
+
 
   useEffect(() => {
+    setLoading(true);
+
     axios.get(`http://localhost:1234/api/get-ad-by-AdCategory?AdCategory=${CategoryName}`)
       .then(json => {
         setAd(json.data.AdByAdCategory)
         // console.log(json.data.AdByAdCategory)
+        setLoading(false);
 
       })
-      .catch(err => console.log(err.response.data))
+      .catch(err => {console.log(err.response.data)
+        setLoading(false);
+      })
+
   }, [])
 
   useEffect(() => {
@@ -31,8 +40,11 @@ export default function AdBlockDynamic({ CategoryName }) {
     <>
 
       {/* category name se match krty huay ads mungwany hain   */}
-
-      {Ad.map((value, index) => (
+ 
+        {
+        loading
+        ?(<Spinner/>): 
+        Ad.map((value, index) => (
         <div className="col-lg-3 col-md-4 col-sm-6 my-3" key={index} data-aos="fade-up" data-aos-duration="500">
           <Link className='text-decoration-none text-dark' to={`/get-ad-by-id/${value._id}`} >
             <Card style={{ height: "360px" }}>
@@ -82,7 +94,22 @@ export default function AdBlockDynamic({ CategoryName }) {
 
           
         </div>
-      ))}
+      ))} 
+        
+          
+     
+
+
+      
+            
+
+        
+      
+      
+      
+      
+      
+      
 
 
 

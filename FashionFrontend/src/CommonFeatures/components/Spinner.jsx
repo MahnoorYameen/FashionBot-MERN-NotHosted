@@ -3,11 +3,15 @@ import React, { Component } from "react";
 export default class Spinner extends Component {
   render() {
     return (
+
+
       <div>
-        <div className="fixed top-0 left-0 w-full h-full bg-black opacity-70 z-50 flex justify-center items-center">
-          <div className="animate-spin rounded-full h-32 w-32 border-t-4 border-blue-500"></div>
+        <div style={{ opacity:"0.2"}} className="position-fixed bg-dark top-0 left-0 w-100 h-100   d-flex justify-content-center align-items-center">
+          <div className="spinner-border   text-primary " style={{height:"16%", width:"8%"}} role="status"></div>
         </div>
       </div>
+
+
     );
   }
 }

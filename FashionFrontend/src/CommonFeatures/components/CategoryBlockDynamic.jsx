@@ -18,13 +18,12 @@ export default function CategoryBlockDynamic() {
 
 
 
-      <div className="container">
     <h2 className='text-center my-3'>Recent Ads</h2>
 
 {/* categories munwali and ab map krwa diya */}
         {
           Category?.map((value, index) =>
-            <div key={index} className=''>
+            <div key={index} className='container'>
 
               {/* ek heading ban gayi for each category  */}
               <h3 className=' my-2 text-capitalize'>{value.CategoryName}:</h3>
@@ -39,7 +38,6 @@ export default function CategoryBlockDynamic() {
 
           )
         }
-      </div>
 
 
 

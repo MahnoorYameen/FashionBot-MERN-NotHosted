@@ -58,7 +58,7 @@ export default function UpdateCategory() {
 
     return (
         <>
-            <Button variant="primary" onClick={handleShow}>
+            <Button variant="primary" className='my-3' onClick={handleShow}>
                 <GrUpdate />
             </Button>
 

@@ -26,8 +26,8 @@ const handleSearch = () => {
 
   return (
     <>
-      <Navbar expand="lg"  style={{backgroundColor:'#fff8f4 '}} className="border-bottom sticky-top">
-        <div className=" container mx-5 py-1 rounded-pill " style={{backgroundColor:'#ffd7ba '}}>
+      <Navbar expand="lg" className="border-bottom sticky-top k-navbar">
+        <div className=" container mx-5 py-1 rounded-pill k-nav-div" >
  
 
 
@@ -42,11 +42,10 @@ const handleSearch = () => {
           </Link>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-
             {/* SEARCH BAR */}
            {/* <SearchbarNav/> */}
 
-           <Form className="d-flex align-items-center  mx-auto   focus:outline-none">
+           <Form className="d-flex align-items-center  mx-auto  k-nav-form">
               <FormControl
                 type="search"
                 placeholder="Enter category here.."

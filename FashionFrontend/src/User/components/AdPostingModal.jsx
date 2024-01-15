@@ -39,7 +39,6 @@ const handleShow=()=> setShow(true)
   // category  mungwa liya
  
   useEffect(()=>{
-    setShow(true)
     axios.get("http://localhost:1234/api/get-all-categories").then(json => {
       setCategories(json.data.Categories)
       })

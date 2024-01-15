@@ -48,6 +48,7 @@ const Chatbot = () => {
 
   return (
     <>
+    <div className="bg-slate-500">
      <div class="min-vh-100 d-flex align-items-center justify-content-center bg-light">
   <div class="container-fluid h-100">
     <div id="chat-messages" class="max-h-80 overflow-auto space-y-2">
@@ -81,6 +82,7 @@ const Chatbot = () => {
       </button>
     </div>
   </div>
+</div>
 </div>
 
 

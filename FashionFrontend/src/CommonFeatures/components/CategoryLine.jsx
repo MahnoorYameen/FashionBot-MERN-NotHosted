@@ -50,7 +50,7 @@ function CategoryLine() {
       <div id='arrival' className=' container '>
         <div className="  row many-row" >
           {Category.map((value, index) =>
-            <div className='col-md-3 my-3' key={index} data-aos="fade-up">
+            <div className='col my-3 full-cat-card' key={index} data-aos="fade-up">
               <Link to={`/get-ad-by-AdCategory/${value.CategoryName}`} className='text-decoration-none'>
                 <div className="responsive-card">
                   <div className=" responsive-imgbox ">
@@ -58,7 +58,7 @@ function CategoryLine() {
                     {value.CategorySVG && (
                       <ReactSVG
                         src={`data:image/svg+xml;utf8,${encodeURIComponent(value.CategorySVG)}`}
-                        className="svg-container responsive-img py-3 "
+                        className="svg-container SvgShadow py-3 "
                       />
                     )}
                   </div>

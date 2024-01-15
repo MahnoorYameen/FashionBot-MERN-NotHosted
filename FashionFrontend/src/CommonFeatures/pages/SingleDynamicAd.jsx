@@ -125,7 +125,9 @@ export default function SingleDynamicAd() {
                   <div className="text-danger mt-2 ">
                     <h3>Rs: {Ad?.AdPrice}</h3>
                   </div>
-                  <div className='d-flex'>
+                
+
+                   <div className='d-flex'>
                       <span className='text-danger'>Location:  <span className='text-dark'></span></span>
                       <div style={{ borderLeft: "2px solid #dc3545", height: "20px" }} className='mt-1 mx-2 '></div>
                       <span className='text-danger text-capitalize'> {Ad?.AdLocation} <span className='text-dark'></span></span>

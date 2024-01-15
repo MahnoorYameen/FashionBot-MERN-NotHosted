@@ -3,9 +3,12 @@
 
 }
 
- /* new arrival card  */
 
- #arrival{
+
+
+/* new arrival card  */
+
+#arrival{
   display: flex;
 	justify-content: center;
   margin-top: 50px;
@@ -16,7 +19,7 @@
 }
 .responsive-card {
   position: relative;
-  width: 250px;
+  width: 150px;
   height: 100px;
   margin-top: 50px;
   border-radius: 10px;
@@ -25,12 +28,9 @@
   padding: 30px 10px;
   background: #ffd7ba;
   cursor: pointer;
-  margin-left: 60px;
+  margin-left: 10px;
 }
-.glowing-text {
-  animation: glowing 2s infinite;
-  color: #0b0a0a;
-}
+
 .responsive-card:hover {
   height: 150px;
 }
@@ -43,7 +43,7 @@
   z-index: 99;
 }
 
-.responsive-img {
+.SvgShadow {
   width: 100%;
   border-radius: 10px;
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
@@ -68,37 +68,79 @@
   -o-transition: opacity 0.3s, transform 0.3s;
   transition: opacity 0.3s, transform 0.3s;
 }
-.responsive-content h2 {
-  color: #7f9ead;
-}
-@media screen and (max-width: 1200px) {
-  .many-row {
-    flex-wrap: wrap;
-  }
 
-  .responsive-card {
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-}
-@media screen and (max-width: 992px) {
-  .responsive-card {
-    width: 200px; /* Adjust width for medium screens */
-  }
 
-  .responsive-imgbox {
-    transform: translateY(-60px); /* Adjust translateY for medium screens */
-  }
+/* MEDIA QUERY */
+
+@media (min-width: 0px) and (max-width: 480px) {
+  .k-navbar{
+    background-color: #fff8f4;
+   }
+   .k-nav-div{
+    background-color: #fff8f4;
+   }
+
+   .k-nav-form{
+display: none;
+
+   }
+ 
+
+
 }
 
-@media screen and (max-width: 768px) {
-  #arrival {
-    flex-direction: column;
-    align-items: center;
-  }
 
-  .responsive-card {
-    margin: 20px;
-    margin-top: 50px;
-  }
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .k-navbar{
+    background-color: #fff8f4;
+   }
+   .k-nav-div{
+    background-color: #fff8f4;
+    margin-top: 20px;
+margin-bottom: 10px;
+
+   }
+
+ 
 }
+
+
+/* 769px — 1024px: Small screens, laptops. */
+@media (min-width: 769px) and (max-width: 990px) {
+  .k-navbar{
+    background-color: #fff8f4;
+   }
+   .k-nav-div{
+    background-color: #fff8f4;
+
+   }
+ 
+  
+}
+
+/* 1025px — 1200px: Desktops, large screens. */
+
+@media (min-width: 991px) and (max-width: 1200px) {
+ .k-navbar{
+  background-color: #fff8f4;
+ }  
+ 
+ .k-nav-div{
+    background-color: #ffd7ba;
+
+   }
+}
+
+@media (min-width: 1201px) and (max-width: 1600px) {
+  .k-navbar{
+   background-color: #fff8f4;
+  }  
+  
+  .k-nav-div{
+     background-color: #ffd7ba;
+ 
+    }
+
+  
+ }

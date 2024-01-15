@@ -15,7 +15,7 @@ export default function Footer() {
           <div className="container pt-3 mt-2">
           <div className="row">
             {/* ROW COL 1 */}
-            <div className="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 d-flex flex-column align-items-center justify-content-center mb-4">
+            <div className="col-12 col-sm-12 col-md-3 col-lg-4 col-xl-4 d-flex flex-column align-items-center justify-content-center mb-4">
               <Link to="/" className=" fw-bold d-flex align-items-end text-decoration-none">
                 <GiClothespin size={35} color="black" />
 
@@ -76,16 +76,18 @@ export default function Footer() {
                   <path d="#" />
                 </svg>
               </div>
+            <hr />
             </div>
 
             {/* ROW COL 2 */}
-            <div className="text-black col-0 col-sm-0 col-md-3 col-lg-3 col-xl-3 d-none d-sm-none d-md-inline">
-              <h3 className="text-lg font-bold mb-3">Support:</h3>
+            <div className="text-black col-0 col-sm-6 col-md-3 col-lg-4 col-xl-4 ">
+              <h3 className="text-lg font-bold my-3">Support:</h3>
               {/* Support Links */}
               <p className="my-0">
-                <a href="/contactus" className=" text-decoration-none text-black">
-                  Contact Us
-                </a>
+                
+                <Link to="contactus" className="text-decoration-none text-dark">
+                Contact Us
+                </Link>
               </p>
               <p className="my-0">
                 <a href="register" className="text-decoration-none text-black">
@@ -106,6 +108,7 @@ export default function Footer() {
                 <a href="/contactus" className="text-decoration-none text-black">
                   Complaints
                 </a>
+              
               </p>
               <p className="my-0">
                 <a href="#" className="text-decoration-none text-black">
@@ -115,8 +118,8 @@ export default function Footer() {
             </div>
 
             {/* ROW COL 3 */}
-            <div className="col-0 col-sm-6 col-md-3 col-lg-3 col-xl-3 d-none d-sm-inline">
-              <h3 className="text-lg font-bold mb-3">Clothing Marketplace</h3>
+            <div className="col-0 col-sm-6 col-md-3 col-lg-4 col-xl-4">
+              <h3 className="text-lg font-bold my-3">Clothing Marketplace</h3>
               {/* cloth Links */}
               <p className="my-0">
                 <a href="#" className="text-decoration-none text-black">

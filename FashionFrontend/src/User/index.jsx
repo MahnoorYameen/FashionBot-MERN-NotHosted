@@ -9,7 +9,7 @@ import Navigationbar from "./components/Navigationbar";
 import AddDetails from "./pages/AddDetails";
 import SingleDynamicAd from "./../CommonFeatures/pages/SingleDynamicAd"
 import Chatbot from "../Guest/components/Chatbot";
-
+import ContactUs from "../Guest/pages/ContactUs";
 //import routing
 import { Route, Routes } from "react-router-dom";
 import SingleCategoryAds from "../CommonFeatures/pages/SingleCategoryAds";
@@ -29,7 +29,7 @@ export default function User() {
         <Route path="/get-product-by-id/:_id" element={<AddDetails />} />
         {/* <Route path="/chatbot" element={<Chatbot />} /> */}
         {/* <Route path="/postadd" element={<PostAnAdd />} /> */}
-        {/* <Route path="/contactus" element={<ContactUs />} /> */}
+        <Route path="/contactus" element={<ContactUs />} />
      <Route path="/get-ad-by-AdCategory/:CategoryName" element={<SingleCategoryAds />} />
 
         {/* <Route path="/register" element={<RegisterPage />} /> */}

@@ -99,7 +99,7 @@ export default function Category() {
 
                 <td>
                   <UpdateCategory/>
-                <button className='btn btn-success mx-2' onClick={()=>deleteCategory(value.CategoryName)}><MdDelete /></button>
+                <button className='btn btn-success mx-2 my-3' onClick={()=>deleteCategory(value.CategoryName)}><MdDelete /></button>
                 </td>
               </tr>
 
